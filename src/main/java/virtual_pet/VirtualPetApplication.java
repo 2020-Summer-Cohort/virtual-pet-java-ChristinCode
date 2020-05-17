@@ -15,6 +15,7 @@ public class VirtualPetApplication {
         System.out.println( prompt the user to choose 1-3);
         Scanner userPickNumber; new Scanner(System.in);
         System.out.println( "You "+ tbd+ " Salem. What would you like t do next?");
+        //add get help feature for numbers guest outside of 1-3
 
     }
     }
