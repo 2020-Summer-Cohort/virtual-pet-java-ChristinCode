@@ -2,12 +2,7 @@ package virtual_pet;
 
 import java.util.Random;
 
-//This whole page is about the users interactions with the game. Think of this class as a storage area: ie library for my package
-// hunger is attribute. feed is method
-//void tick is the Method
 public class VirtualPet {
-
-    //Add Variable-this is the pet name we can assign name later or pet is hunger assign feed in thee update method
     private String petName;
     private String species;
     private int hunger;
@@ -15,7 +10,6 @@ public class VirtualPet {
     private int tiredness;
     private int tickCount;
 
-    //Get-methods first bc they are easier and cleaner.
     public String defineSelection(int selection) {
         if (selection == 1) {
             feed(6);
@@ -54,10 +48,6 @@ public class VirtualPet {
         return tickCount;
     }
 
-    //Update Methods
-    //are what happens to the values as user interacts ie hunger becomes
-    // do not need name or species bc they will be assigned and user does not get to name
-    //if I want user to name, I would create a public void updateName || public void updateSpecie
     private void feed(int fed) {
         if (hunger - fed >= 0) {
             hunger = hunger - fed;
@@ -97,11 +87,8 @@ public class VirtualPet {
         }
     }
 
-    public void tick() { /*Tick is counting the number of time the user is interacting
-     * Tick is tracking the number of times the user interacts with game loop
-     * needs to be the if else */
+    public void tick() {
         tickCount++;
-
         if (hunger + 1 <= 10) {
             hunger = hunger + 1;
         } else {
@@ -119,13 +106,11 @@ public class VirtualPet {
         }
     }
 
-    //Constructor
-    //this is the Dam Examples
     public VirtualPet(String animalName, String animalSpecies) {
-        Random generateNumber = new Random();/*declaration-declaring random object*/
-        int numberGenerated;/*declaration-declaring random object*/
+        Random generateNumber = new Random();
+        int numberGenerated;
 
-        this.petName = animalName; /*from here below, I am initializing the variables*/
+        this.petName = animalName;
         this.species = animalSpecies;
 
         numberGenerated = generateNumber.nextInt(10);
