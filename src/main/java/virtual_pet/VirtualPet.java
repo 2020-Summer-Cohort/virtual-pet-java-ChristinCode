@@ -10,6 +10,21 @@ public class VirtualPet {
     private int tiredness;
     private int tickCount;
 
+    public VirtualPet(String animalName, String animalSpecies) {
+        Random generateNumber = new Random();
+        int numberGenerated;
+
+        this.petName = animalName;
+        this.species = animalSpecies;
+
+        numberGenerated = generateNumber.nextInt(10);
+        this.hunger = numberGenerated;
+        numberGenerated = generateNumber.nextInt(10);
+        this.boredom = numberGenerated;
+        numberGenerated = generateNumber.nextInt(10);
+        this.tiredness = numberGenerated;
+    }
+
     public String defineSelection(int selection) {
         if (selection == 1) {
             feed(6);
@@ -106,20 +121,6 @@ public class VirtualPet {
         }
     }
 
-    public VirtualPet(String animalName, String animalSpecies) {
-        Random generateNumber = new Random();
-        int numberGenerated;
-
-        this.petName = animalName;
-        this.species = animalSpecies;
-
-        numberGenerated = generateNumber.nextInt(10);
-        this.hunger = numberGenerated;
-        numberGenerated = generateNumber.nextInt(10);
-        this.boredom = numberGenerated;
-        numberGenerated = generateNumber.nextInt(10);
-        this.tiredness = numberGenerated;
-    }
 }
 
 

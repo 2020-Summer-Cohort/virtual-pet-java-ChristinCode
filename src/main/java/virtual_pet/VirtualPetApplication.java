@@ -8,6 +8,11 @@ public class VirtualPetApplication {
         Scanner activeUser = new Scanner(System.in);
         int usersSelection = 1;
         System.out.println("Hello, " + pet.getPetName() + ", the cuddly " + pet.getSpecies() + ", is excited to see you. He is currently not doing well and needs attention.");
+        gameLoop(pet, activeUser, usersSelection);
+        System.out.println("Thank you for taking care of " + pet.getPetName() + ". See you next time!");
+    }
+
+    private static void gameLoop(VirtualPet pet, Scanner activeUser, int usersSelection) {
         while (usersSelection != 0) {
             System.out.println(pet.getPetName() + "'s need levels are:");
             System.out.println("Hunger: " + pet.getHunger());
@@ -20,6 +25,5 @@ public class VirtualPetApplication {
                 System.out.println("You chose for " + pet.getPetName() + " to " + pet.defineSelection(usersSelection) + ". What would you like to do next?");
             }
         }
-        System.out.println("Thank you for taking care of " + pet.getPetName() + ". See you next time!");
     }
 }
