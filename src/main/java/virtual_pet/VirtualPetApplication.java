@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class VirtualPetApplication {
     public static void main(String[] args) {
-        VirtualPet pet = new VirtualPet("Salem", "cat");
-        Scanner activeUser = new Scanner(System.in);
         int usersSelection = 1;
+        VirtualPet pet = new VirtualPet("Salem", "cat");
+        VirtualPetArt art = new VirtualPetArt();
+        Scanner activeUser = new Scanner(System.in);
+        System.out.println(art.art);
         System.out.println("Hello, " + pet.getPetName() + ", the cuddly " + pet.getSpecies() + ", is excited to see you. He is currently not doing well and needs attention.");
         gameLoop(pet, activeUser, usersSelection);
         System.out.println("Thank you for taking care of " + pet.getPetName() + ". See you next time!");

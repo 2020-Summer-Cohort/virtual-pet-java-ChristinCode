@@ -27,4 +27,13 @@ user interaction.
 Virtual Pet Application Class:
 
 The application imported the scanner library in order to read 
-the users keyboard. 
+the users keyboard. Next I created an object in order to pull from 
+the Virtual Pet Class. Application prints out direction to user. 
+I called my game loop into my main method. I chose to refactor my 
+while loop to keep things clean. Just for fun, I included a 0 to
+exit feature. 
+
+Stretch Goal
+Added the ability to take care of it's needs by using the randomizer in tick.
+Added Ascii art of cat.
+Added in Test using the defineSelection method.

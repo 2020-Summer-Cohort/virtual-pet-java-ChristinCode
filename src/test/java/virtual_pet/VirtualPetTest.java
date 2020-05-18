@@ -1,22 +1,29 @@
 package virtual_pet;
-/* Stretch Goal
- *Build out unit tests in the VirtualPetTest class to test the behaviors placed in VirtualPet
- */
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VirtualPetTest {
+
     @Test
-    public void secondVirtualPetClass() {
-        VirtualPetApplication test = new VirtualPetApplication();
+    public void testDefineSelection1() {
+        VirtualPet Test = new VirtualPet("", "");
+        String answer = Test.defineSelection(1);
+        assertEquals("eat", answer);
     }
 
     @Test
-    public void testOne() {
-        VirtualPet Test = new VirtualPet();
-        String answer = Test.getHunger(1);
-        assertEquals("Feed Salem", answer);
+    public void testDefineSelection2() {
+        VirtualPet Test = new VirtualPet("", "");
+        String answer = Test.defineSelection(2);
+        assertEquals("play", answer);
+    }
+
+    @Test
+    public void testDefineSelection3() {
+        VirtualPet Test = new VirtualPet("", "");
+        String answer = Test.defineSelection(3);
+        assertEquals("sleep", answer);
     }
 }
