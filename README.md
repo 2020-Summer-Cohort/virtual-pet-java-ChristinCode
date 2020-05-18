@@ -33,7 +33,8 @@ I called my game loop into my main method. I chose to refactor my
 while loop to keep things clean. Just for fun, I included a 0 to
 exit feature. 
 
-Stretch Goal
+Stretch Goal:
+
 Added the ability to take care of it's needs by using the randomizer in tick.
 Added Ascii art of cat.
 Added in Test using the defineSelection method.
